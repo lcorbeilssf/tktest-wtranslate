@@ -1,0 +1,58 @@
+{ 
+    "HISTORY_CTRL": {
+        "TITLE": "Mes résultats",
+        "MENU": "Menu",
+        "TEST": "Test ",
+        "CREATED_DATE": "{{test.createDate | date:'fullDate'}}",
+        "CREATED_TIME": "{{test.createDate | date:'shortTime'}}"
+    },
+    "LANDING_CTRL": {
+        "TITLE": "T. K. Test",
+        "LOGIN": "S'identifier",
+        "REGISTER": "Registre"
+    },
+    "LOBBY_CTRL": {
+        "MENU": "Menu",
+        "LOGOUT": "Se déconnecter",
+        "TAKE_TEST": "Passer un examen",
+        "MY_RESULTS": "Mes résultats"
+    },
+    "LOGIN_CTRL": {
+        "LOGIN": "S'identifier",
+        "REMEMBER_ME": "Souviens-toi de moi?",
+        "EMAIL": "Email",
+        "PASSWORD": "Mot de passe"
+        
+    },
+    "QUESTION_CTRL": {
+        "MENU": "Menu",
+        "OPTION_A": "Option A",
+        "OPTION_B": "Option B",
+        "A": "A",
+        "B": "B"
+    },
+    "REGISTER_CTRL": {
+        "REGISTER": "Registre",
+        "EMAIL": "Email",
+        "FIRST_NAME": "Prénom",
+        "LAST_NAME": "Nom de famille",
+        "COMPANY_OPTIONAL": "Société (Optionel)",
+        "PASSWORD": "Mot de passe",
+        "REPEAT_PASSWORD": "Répéter le mot de passe",
+        "SIGN_UP": "S'inscrire"
+    },
+    "RESULTS_CTRL": {
+        "MENU": "Menu",
+        "RESULTS": "Résultats"
+    },
+    "ERRORS": {
+        "ERROR": "Erreur",
+        "GENERAL": "Quelque chose a mal tourné , essayez à nouveau.",
+        "NULL": "La connexion avec le serveur a échoué , vérifiez votre connexion Internet et réessayer plus tard.",
+        "LOGIN_401": "Identifiant ou mot de passe incorrect.",
+        "422": "Le courriel est déjà pris.",
+        "SIGN_UP_401": "Un ou plusieurs champs ne sont pas valides",
+        "LOG_OUT": "Impossible de se déconnecter à ce moment , essayer à nouveau.",
+        "PASSWORDS": "Les mots de passe doivent correspondre."
+    }
+}

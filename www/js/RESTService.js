@@ -1,5 +1,5 @@
 angular.module('RESTConnection', [])
-  .constant('ENDPOINT_URL', 'https://strongloop-tkbackend-abaker-ssf.c9.io/api/')//new backend api
+  .constant('ENDPOINT_URL', 'https://tktest-backenddos-leif-lcorbeilssf.c9users.io/api/')//new backend api
  
   //https://toyapp-abaker-ssf.c9.io/api/ MY BACKEND
   

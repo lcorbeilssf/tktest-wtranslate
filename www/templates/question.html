@@ -1,8 +1,8 @@
-<ion-view view-title="{{title}}">
+<ion-view view-title="{{ 'QUESTION_CTRL.TITLE' | translate }}">
   <ion-content class="padding">
     <div class="card">
       <div class="item item-divider">
-        Option A
+       {{ 'QUESTION_CTRL.OPTION_A' | translate }}
       </div>
       <div class="item item-text-wrap">
         {{questionA.Text}}
@@ -10,7 +10,7 @@
     </div>  
     <div class="card">
       <div class="item item-divider">
-        Option B
+        {{ 'QUESTION_CTRL.OPTION_B' | translate }}
       </div>
       <div class="item item-text-wrap">
         {{questionB.Text}}
@@ -19,12 +19,12 @@
     <div class="row">
         <div class="col">
             <button class="button button-block button-positive" ng-click="buttonClicked('A')">
-              A
+             {{ 'QUESTION_CTRL.A' | translate }}
             </button>
         </div>
         <div class="col">
             <button class="button button-block button-positive" ng-click="buttonClicked('B')">
-              B
+            {{ 'QUESTION_CTRL.OPTION_B' | translate }}
             </button>
         </div>
     </div>

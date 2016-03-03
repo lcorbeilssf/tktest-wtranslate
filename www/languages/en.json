@@ -1,0 +1,61 @@
+
+
+{ 
+    "HISTORY_CTRL": {
+        "TITLE": "My Results",
+        "MENU": "Menu",
+        "TEST": "Test ",
+        "CREATED_DATE": "{{test.createDate | date:'fullDate'}}",
+        "CREATED_TIME": "{{test.createDate | date:'shortTime'}}"
+    },
+    "LANDING_CTRL": {
+        "TITLE": "T. K. Test",
+        "LOGIN": "Login",
+        "REGISTER": "Register"
+    },
+    "LOBBY_CTRL": {
+        "MENU": "Menu",
+        "LOGOUT": "Log Out",
+        "TAKE_TEST": "Take Test",
+        "MY_RESULTS": "My Results"
+    },
+    "LOGIN_CTRL": {
+        "LOGIN": "Login",
+        "REMEMBER_ME": "Remember Me?",
+        "EMAIL": "Email",
+        "PASSWORD": "Password"
+        
+    },
+    "QUESTION_CTRL": {
+        "TITLE": "Title",
+        "OPTION_A": "Option A",
+        "OPTION_B": "Option B",
+        "A": "A",
+        "B": "B"
+    },
+    "REGISTER_CTRL": {
+        "REGISTER": "Register",
+        "EMAIL": "Email",
+        "FIRST_NAME": "First Name",
+        "LAST_NAME": "Last Name",
+        "COMPANY_OPTIONAL": "Company (Optional)",
+        "PASSWORD": "Password",
+        "REPEAT_PASSWORD": "Repeat Password",
+        "SIGN_UP": "Sign Up"
+    },
+    "RESULTS_CTRL": {
+        "MENU": "Menu",
+        "RESULTS": "Results"
+    },
+    "ERRORS": {
+        "ERROR": "Error",
+        "GENERAL": "Something went wrong, try again.",
+        "NULL": "The connection with the server was unsuccessful, check your internet connection and try again later.",
+        "LOGIN_401": "Incorrect username or password.",
+        "422": "The email is already taken.",
+        "SIGN_UP_401": "One or more fields are invalid",
+        "LOG_OUT": "Could not logout at this moment, try again.",
+        "PASSWORDS": "Passwords must match."
+    }
+}
+

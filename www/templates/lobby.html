@@ -1,15 +1,15 @@
-<ion-view view-title="Menu">
-        <ion-nav-buttons side="left">
-          <button class="button" ng-click="logout()">
-             <i class="icon ion-log-out light"></i>
-          </button>
-        </ion-nav-buttons>
-    <ion-content class="padding">
-        <button class="button button-block button-positive" ng-click="takeTestButtonTapped()">
-          Take test
-        </button>
-        <button class="button button-block button-positive" ui-sref="history">
-          My Results
-        </button>
-    </ion-content>
+<ion-view view-title="{{'LOBBY_CTRL.MENU' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button" ng-click="logout()">
+      <i class="icon ion-log-out light"></i>
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <button class="button button-block button-positive" ng-click="takeTestButtonTapped()">
+      {{ 'LOBBY_CTRL.TAKE_TEST' | translate }}
+    </button>
+    <button class="button button-block button-positive" ui-sref="history">
+      {{ 'LOBBY_CTRL.MY_RESULTS' | translate }} 
+    </button>
+  </ion-content>
 </ion-view>
