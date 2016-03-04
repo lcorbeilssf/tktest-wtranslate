@@ -3,42 +3,51 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'starter.controllers', 'pascalprecht.translate', 'RESTConnection', 'TKServicesModule', 'chart.js', 'SSFAlerts', 'tmh.dynamicLocale'])
+angular.module('starter', ['ionic', 'ionic.service.core', 'starter.controllers', 'pascalprecht.translate', 'RESTConnection', 'TKServicesModule', 'chart.js', 'SSFAlerts', 'tmh.dynamicLocale', 'ionic.service.analytics'])
+
+
+.config(['$ionicAutoTrackProvider', function($ionicAutoTrackProvider) {
+  // Don't track which elements the user clicks on.
+  $ionicAutoTrackProvider.disableTracking('Tap');
+}])
 
 
 .config(function(tmhDynamicLocaleProvider) {
-tmhDynamicLocaleProvider.localeLocationPattern("lib/angular-locale/angular-locale_{{locale}}.js");
+  tmhDynamicLocaleProvider.localeLocationPattern("lib/angular-locale/angular-locale_{{locale}}.js");
 })
 
 .config(function($translateProvider) {
-$translateProvider
-.registerAvailableLanguageKeys(['en', 'it','es'], {
-   'en_*': 'en',
-   'it_*': 'it',
-   'es_*': 'es'
- })
-.preferredLanguage('en')
-.determinePreferredLanguage();
+  $translateProvider
+    .registerAvailableLanguageKeys(['en', 'it', 'es'], {
+      'en_*': 'en',
+      'it_*': 'it',
+      'es_*': 'es'
+    })
+    .preferredLanguage('en')
+    .determinePreferredLanguage();
 })
 
 .config(function($translateProvider) {
   $translateProvider
   //Load languages files from path
     .useStaticFilesLoader({
-      prefix: 'languages/',
-      suffix: '.json'
-    });
-    //.preferredLanguage('en');
+    prefix: 'languages/',
+    suffix: '.json'
+  });
+  //.preferredLanguage('en');
 })
 
-.run(["$ionicPlatform", "$window", "$state", "$translate", function($ionicPlatform, $window, $state, $translate) {
+.run(["$ionicPlatform", "$ionicAnalytics", "$window", "$state", "$translate", function($ionicPlatform, $ionicAnalytics, $window, $state, $translate) {
   $ionicPlatform.ready(function() {
-    
+
+    //the following capture all events (i.e. touches, swipes, changes) and push it to ionic every 30sec
+    Ionic.io();
+    $ionicAnalytics.register();
     //for translating to spanish use es
     //$translate.use('es');
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    
+
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
@@ -139,13 +148,13 @@ $translateProvider
   }])
   .run(["$rootScope", "$ionicHistory", "$state", "$window", function($rootScope, $ionicHistory, $state, $window) {
     $rootScope.$on('request:auth', function() {
-        $ionicHistory.nextViewOptions({
-          historyRoot: true,
-          disableBack: true
-        });
-        delete $window.localStorage['token'];
-        delete $window.localStorage['userID'];
-        $state.go('landing');
+      $ionicHistory.nextViewOptions({
+        historyRoot: true,
+        disableBack: true
       });
+      delete $window.localStorage['token'];
+      delete $window.localStorage['userID'];
+      $state.go('landing');
+    });
 
   }]);

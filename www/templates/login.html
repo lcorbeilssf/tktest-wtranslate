@@ -14,6 +14,8 @@
             {{ 'LOGIN_CTRL.LOGIN' | translate }}
             {{ testDate | date : format : timezone}}
           </button>
+          <button class="button button-block button-positive" type="submit" ion-track-tap="Login-tap" ion-track-data="{ mockData: 'User tapped Login'}"></button>
+
         </form>
     </ion-content>
 </ion-view>
